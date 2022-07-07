@@ -1,0 +1,81 @@
+<div class="container">
+
+  <!-- <div class="row g-1 justify-content-md-center">
+
+    <div class="col-lg">
+      <img class="imagem-pizzaria"  src="https://www.ifood.com.br/static/images/merchant/banner/DEFAULT.png" 
+        alt="...">
+
+  </div> -->
+
+<!-- 
+  <br>
+  <div class="row">
+    <div class="pizzaria-info"><img class="pizzaria-info__logo"
+        src="https://cdn.pixabay.com/photo/2015/12/07/22/27/pizza-1081534_960_720.jpg" alt="">
+      <div>
+        <div class="">
+          <h1 class="">Pizzas / Esfihas</h1>
+        </div>
+
+      </div>
+    </div>
+
+  </div> -->
+
+  <br>
+  <br>
+
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="col">
+      <div class="card h-100 shadow-lg"routerLink="/products" (click)="itemSelecionado('pizza')">
+        <img alt="Card image cap" class="card-img-top"  width="100" height="250" src="../assets/img/imagem_6.jpg" />       
+
+          <div class="card-body">
+            <h5 class="card-title">GRANDE (8 PEDAÇOS)</h5>
+            <p class="card-text">Pizza inteira</p>
+          </div>
+        
+        <div class="card-footer">
+          <small class="text-muted">A PARTIR DE 35 REAIS</small>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col">
+      <div class="card h-100 shadow-lg"  routerLink="/products" (click)="itemSelecionado('esfiha')">
+        <img alt="Card image cap" class="card-img-top " width="100" height="250" src="../assets/img/imagem_3.jpg" />
+
+          <div class="card-body">
+
+            <h5 class="card-title">ESFIHAS
+            </h5>
+            <p class="card-text">O valor total da pizza será calculado pelo sabor de maior preço.</p>
+          </div>
+        
+        <div class="card-footer">
+          <small class="text-muted">A PARTIR DE 3 REAIS</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100 shadow-lg" routerLink="/products" (click)="itemSelecionado('bebida')">
+        <img alt="Card image cap" class="card-img-top " width="100" height="250" src="../assets/img/imagem_4.jpg" />
+        
+          <div class="card-body">
+            <h5 class="card-title">BEBIDAS</h5>
+            <p class="card-text">Regrigerantes, cerveja ...</p>
+          </div>
+        
+
+        <div class="card-footer">
+          <small class="text-muted">A PARTIR DE 8 REAIS</small>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <br>
+</div>

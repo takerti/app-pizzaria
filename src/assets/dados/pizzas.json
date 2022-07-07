@@ -1,0 +1,190 @@
+[
+  
+  {
+  "id": 1,
+  "title": "A Moda da Casa",
+  "price": 53.00,
+  "description": "Frango temperado, cheddar especial e Doritos Elma Chip's",
+  "category": "pizza",
+  "image": "../assets/img/imagem_5.png" ,
+  "qte":0,
+  "observacao":"",
+  "borda":{
+    "tipo": "Tradicional",
+    "preco": 0
+  }
+},
+{
+  "id": 2,
+  "title": "A Moda do Chef",
+  "price": 51.00,
+  "description": "Brocolis, cream cheese, tomate picado e alho frito",
+  "category": "pizza",
+  "image": "../assets/img/imagem_5.png" ,
+  "qte":0,
+  "observacao":"",
+  "borda":{
+    "tipo": "Tradicional",
+    "preco": 0
+  }
+
+},{
+  "id": 3,
+  "title": "A Moda do Pizzaiolo",
+  "price": 51.00,
+  "description": "Mussarela, brocolis, ricota e tomate seco",
+  "category": "pizza",
+  "image": "../assets/img/imagem_5.png",
+  "qte":0,
+  "observacao":"",
+  "borda":{
+    "tipo": "Tradicional",
+    "preco": 0
+  }
+},
+{
+  "id": 4,
+  "title": "Alho",
+  "price": 44.00,
+  "description": "Mussarela e alho frito",
+  "category": "esfihas",
+  "image": "../assets/img/imagem_5.png" ,
+  "qte":0,
+  "observacao":"",
+  "borda":{
+    "tipo": "Tradicional",
+    "preco": 0
+  }  
+},{
+  "id": 5,
+  "title": "Alho Poro",
+  "price": 45.00,
+  "description": "Mussarela, alho poró e gorgonzola",
+  "category": "pizza",
+  "image": "../assets/img/imagem_5.png",
+  "qte":0,
+  "observacao":"",
+  "borda":{
+    "tipo": "Tradicional",
+    "preco": 0
+  }  
+},
+{
+  "id": 6,
+  "title": "pizza",
+  "price": 44.00,
+  "description": "Calabresa moída, ovos, pimenta e mussarela",
+  "category": "esfihas",
+  "image": "../assets/img/imagem_5.png",
+  "qte":0,
+  "observacao":"",
+  "borda":{
+    "tipo": "Tradicional",
+    "preco": 0
+  }  
+},{
+  "id": 7,
+  "title": "Batata Frita",
+  "price": 48.00,
+  "description": "Batata frita, mussarela e bacon",
+  "category": "pizza",
+  "image": "../assets/img/imagem_5.png",
+  "qte":0,
+  "observacao":"",
+  "borda":{
+    "tipo": "Tradicional",
+    "preco": 0
+  }
+},
+{
+  "id": 8,
+  "title": "Bauru",
+  "price": 44.00,
+  "description": "Presunto, tomate e mussarela",
+  "category": "pizza",
+  "image": "../assets/img/imagem_5.png",
+  "qte":0,
+  "observacao":"",
+  "borda":{
+    "tipo": "Tradicional",
+    "preco": 0
+  } 
+},{
+  "id": 9,
+  "title": "Berinjela",
+  "price": 44.00,
+  "description": "Mussarela, berinjela, parmesão ralado e alho frito",
+  "category": "pizza",
+  "image": "../assets/img/imagem_5.png",
+  "qte":0,
+  "observacao":"",
+  "borda":{
+    "tipo": "Tradicional",
+    "preco": 0
+  }
+},
+{
+  "id": 10,
+  "title": "Brocolis I",
+  "price": 44.00,
+  "description": "Brocolis e mussarela",
+  "category": "pizza",
+  "image": "../assets/img/imagem_5.png",
+  "qte":0,
+  "observacao":"",
+  "borda":{
+    "tipo": "Tradicional",
+    "preco": 0
+  }
+},
+{
+  "id": 11,
+  "title": "Brocolis II",
+  "price": 55.00,
+  "description": "Brocólis, catupiry, bacon e alho frito",
+  "category": "pizza",
+  "image": "../assets/img/imagem_5.png",
+  "qte":0,
+  "observacao":"",
+  "borda":{
+    "tipo": "Tradicional",
+    "preco": 0
+  }
+}
+
+,
+{
+  "id": 12,  "title": "Alho",  "price": 3.30,  "description": "Mussarela,alho e orégano.",  "category": "esfiha",  "image": "../assets/img/esfilha_1.jpg",
+  "qte":0,  "observacao":""
+}
+
+,
+{
+  "id": 13,  "title": "Atum",  "price": 3.30,  "description": "Atum e cebola.",  "category": "esfiha",  "image": "../assets/img/esfilha_1.jpg",
+  "qte":0,  "observacao":""
+}
+
+,
+{
+  "id": 14,  "title": "Bacon",  "price": 3.30,  "description": "Bacon e mussarela.",  "category": "esfiha",  "image": "../assets/img/esfilha_1.jpg",
+  "qte":0,  "observacao":""
+}
+
+,
+{
+  "id": 15,  "title": "Bauru",  "price": 3.30,  "description": "Presunto, tomate e mussarela.",  "category": "esfiha",  "image": "../assets/img/esfilha_1.jpg",
+  "qte":0,  "observacao":""
+}
+
+,
+{
+  "id": 16,  "title": "Calabresa",  "price": 3.30,  "description": "Calabresa moída e cebola.",  "category": "esfiha",  "image": "../assets/img/esfilha_1.jpg",
+  "qte":0,  "observacao":""
+},
+
+{
+  "id": 17,  "title": "Coca-Cola",  "price": 10.00,  "description": "Coca-cola em lata 330 ml.",  "category": "bebida",  "image": "../assets/img/coca_1.jpg",
+  "qte":0,  "observacao":""
+}
+
+]

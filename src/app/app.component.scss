@@ -1,0 +1,17 @@
+.imagemFundo{
+    // background-image: url(../assets/background/imagem1.jpg);
+    
+    margin: 0;
+     background-image: url("../assets/background/imagem7.jpg");    
+    
+    background-position: center;    
+    display: block;
+    overflow-y: scroll;
+     height: 100%;
+     width: 100%;
+     background-size: 100% 100%;
+     
+     background-attachment: fixed, scroll;
+     position: absolute;
+  
+}

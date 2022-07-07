@@ -1,0 +1,168 @@
+<div class="container">
+
+  <div class="row justify-content-center">
+    <div class="col-sm-5" style="min-width: 60%;">
+
+      <ng-container *ngIf="isPizza();">
+        <p class="fs-3">Voce pode escolher até 3 sabores:</p>
+      </ng-container>
+      <hr>
+
+      <form class="d-flex">
+        <input type="text" class="form-control text-danger" placeholder="pesquisar" (ngModel)="searchTerm"
+          (keyup)="search($event)">
+
+      </form>
+      <br>
+
+
+      <div class="card mb-2 border shadow-lg" *ngFor="let item of filterCategory | filter:searchKey:'title'">
+
+        <div class="card-body">
+
+          <div class="row">
+
+            <div  class="col centralizarImagem">              
+                <img alt="image cap"  width="250" height="150" src="{{ item.image }}" />
+            </div>
+
+            <div class="col">
+              <div class="d-flex flex-column bd-highlight"  >
+
+                <div class="d-flex bd-highlight">
+
+                  <div class="flex-grow-1 bd-highlight">
+
+                    <div class="bd-highlight">
+                      <h5 class="card-title">{{item.title}}</h5>
+                    </div>
+
+                  </div>
+
+                  <div class="bd-highlight">
+
+                    <div class="bd-highlight">
+
+                      <div class="d-flex flex-row bd-highlight">
+
+                        <div class="p-2 bd-highlight">
+
+                          <button type="button" class="btn btn-danger btn-circle btn-sm" (click)=removetocart(item)>
+                            <i class="fa fa-minus"></i>
+                          </button>
+                        </div>
+
+                        <div class="p-2 bd-highlight">
+                          {{item.qte}}
+                        </div>
+
+                        <div class="p-2 bd-highlight ">
+                          <button type="button" class="btn btn-danger btn-circle btn-sm" (click)=addtocart(item)>
+                            <i class="fa fa-plus"></i>
+                          </button>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="d-flex  bd-highlight">
+
+                  {{item.description}}
+
+                </div>
+
+                <div class="d-flex">
+
+                  <div class="p-2 flex-grow-1 bd-highlight text-danger">
+                    {{item.price | currency : 'BRL'}}
+                  </div>
+
+                  <div class="p-2 bd-highlight">
+
+                    <button type="button" class="btn btn-outline-danger btn-sm " (click)="adicionarComentario(item)"
+                      data-bs-toggle="modal" data-bs-target="#staticBackdrop" *ngIf="! item.observacao">
+                      Adicionar observação
+                    </button>
+
+                    <button type="button" class="btn btn-outline-success btn-sm" (click)="adicionarComentario(item)"
+                      data-bs-toggle="modal" data-bs-target="#staticBackdrop" *ngIf="item.observacao">
+                      Editar observação</button>
+                  </div>
+
+                </div>
+              </div>
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+    <ng-container *ngIf="this.itemSelecionados?.length > 0">
+
+      <div class="row justify-content-md-center">
+
+        <div class="button-bottom-pizza">
+
+          <div class="col-12">
+            <h5>Sabores Escolhidos</h5>
+          </div>
+
+          <div class="col-12" *ngFor="let item of this.itemSelecionados">
+            <h6>- {{item.title}}</h6>
+          </div>
+
+          <div class="col-12">
+            
+            <button routerLink="/bordas" class="btn btn-danger"  *ngIf="isPizza();">Escolher Borda</button>
+
+            <button routerLink="/inicio" class="btn btn-danger"  *ngIf="! isPizza();">Continuar</button>
+
+          </div>
+
+        </div>
+      </div>
+
+    </ng-container>
+
+    <!-- Modal -->
+
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+
+            <h5 class="modal-title" id="staticBackdropLabel">Adicionar observação</h5>
+
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body">
+
+
+            <div class="mb-3">
+              <label for="observação" class="form-label" placeholder="ex: sem cebola">Observação:</label>
+              <textarea type="text" class="form-control" id="observação" rows="3" [(ngModel)]="observacao"></textarea>
+            </div>
+
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+            <button type="button" class="btn btn-danger" (click)="salvarComentario()"
+              data-bs-dismiss="modal">Adicionar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>

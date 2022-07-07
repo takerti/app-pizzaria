@@ -1,0 +1,31 @@
+<div class="container">
+
+  <div class="row g-1 justify-content-md-center">
+
+    <div class="col-sm-4" style="min-width: 400px;">      
+      <p class="fs-4">Clique na Borda desejada:</p>
+      <hr>
+      <br>
+      <p class="fs-3  text-danger">- Pizza {{ this.itemSelecionado.title }}</p>
+
+      <ng-container *ngFor="let borda of this.bordas">
+        <div class="col-sm-12 mb-2" style="color:darkgray">
+          <div class="list-group" id="list-tab" role="tablist">
+            <button type="button" class="list-group-item list-group-item-action" (click)="addBorda(this.itemSelecionado, borda)">
+              <div>
+                <span>{{ borda.tipo }}</span>
+              </div>
+            </button>
+          </div>
+        </div>
+      </ng-container>
+
+      <br>
+      <div class="d-grid col-6 mx-auto">
+        <button routerLink="/inicio" class="btn btn-danger">Adicionar</button>
+      </div>
+
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,68 @@
+ <ng-container *ngIf="products.length !=0">
+    <div class="container" style="background-color: white">
+        <div class="row justify-content-center">
+
+            <p class="fs-4">Resumo de Pedidos:</p>
+        <!-- <div class="card-table"> -->
+            <!-- <div class="cart-product"> -->
+                <table class="table table-responsive">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Produto</th>                            
+                            <th>Descrição</th>
+                            <th>Valor</th>
+                            <th>Qte</th>
+                            <th>Tp. Borda</th>
+                            <th>Observação</th>
+                            <th>Total</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of products; let i = index">                            
+                            <td>{{i+1}}</td>
+                            <td>{{item.title}}</td>                            
+                            <td style="width: 25%;">{{item.description}}</td>
+                            <th style="width: 12%;">{{item.price | currency : 'BRL'	}}</th>
+                            <td style="width: 12%;">{{item.quantity}}</td>
+
+                            <td style="width: 12%;" *ngIf="!! item.borda">{{item.borda.tipo}}</td>
+
+
+                            <td style="width: 12%;">{{item.observacao}}</td>
+                            <td style="width: 12%;">{{item.total | currency : 'BRL'	}}</td>                          
+                            <td>
+                                <button (click)="removeItem(item)" class="btn btn-danger" style="margin-right:3px;"><i class="fas fa-trash-alt"></i></button>                                
+                            </td>                           
+
+                        </tr>
+                        <tr>
+                            <td colspan="4"></td>
+                            <td><button (click)="emptycart()" class="btn btn-danger">Limpar</button></td>
+                            <td><button routerLink="/inicio" class="btn btn-primary">Voltar</button></td>
+                            <td><button  routerLink="/endereco"class="btn btn-success" >Finalizar </button></td>
+                            <td><strong>Valor Total : R${{grandTotal}}</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                
+            <!-- </div> -->
+        </div>
+        </div>
+    <!-- </div> -->
+</ng-container> 
+
+<ng-container *ngIf="products.length == 0">
+    <div class="container"style="background-color: white">
+        <div class="card shadow-lg">
+            <h5 class="card-title">Meu Carrinho</h5>
+        </div>
+        <div class="center">
+            <img src="https://rukminim1.flixcart.com/www/800/800/promos/16/05/2019/d438a32e-765a-4d8b-b4a6-520b560971e8.png?q=90" alt="">
+            <h4>Carrinho vazio!</h4>
+            <button routerLink="/inicio" class="btn btn-primary">Pedido</button>
+        </div>
+    </div>
+</ng-container>

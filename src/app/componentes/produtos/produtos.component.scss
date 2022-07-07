@@ -1,0 +1,40 @@
+.button-bottom-pizza {
+    color: #222;
+    position: fixed;
+    bottom: 0;    
+    padding: 13px 5px 13px 10px;
+    box-shadow: 0 0 5px rgb(0 0 0 / 30%);
+    background-color: #fff;
+    border-radius: 5px 5px 0 0;    
+    text-align:center;    
+}
+
+.form-control:focus {
+    border-color: #FF0000;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+  }
+
+.btn-circle.btn-sm {
+    width: 30px;
+    height: 30px;
+    // padding: 6px 0px;
+    border-radius: 15px;
+    font-size: 8px;
+    text-align: center;
+}
+
+.btn-circle.btn-xl {
+    // width: 70px;
+    // height: 70px;
+    // padding: 10px 16px;
+    border-radius: 35px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.centralizarImagem { 
+    display:         flex;
+    display: -webkit-flex; /* Garante compatibilidade com navegador Safari. */
+    justify-content: center;
+    align-items: center;
+}
